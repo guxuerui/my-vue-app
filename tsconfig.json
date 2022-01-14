@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "types": ["vite/client", "element-plus/global"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@c/*": ["./src/components/*"],
+      "@views/*": ["./src/views/*"],
+      "@utils/*": ["./src/utils/*"]
+      // "@/styles/*": ["./src/styles/*"],
+      // "@/assets/*": ["./src/assets/*"],
+      // "@/pages/*": ["./src/pages/*"],
+      // "@/routes/*": ["./src/routes/*"],
+      // "@/store/*": ["./src/store/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["node_modules"]
+}
