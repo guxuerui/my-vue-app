@@ -5,7 +5,7 @@ export interface State {
   count: number
 }
 
-export const key: InjectionKey<Store<State>> = Symbol('admin-store')
+export const key: InjectionKey<Store<State>> = Symbol()
 
 export const store = createStore<State>({
   state: {

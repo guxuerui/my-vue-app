@@ -4,7 +4,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-  import { ref, reactive, toRefs, onMounted } from 'vue';
+  import { reactive, toRefs, onMounted } from 'vue';
   import drag from '@c/drag.vue';
   import { useRouter, useRoute } from 'vue-router';
   const router = useRouter();

@@ -1,4 +1,7 @@
 <template>
+  <div class="mt-4">
+    <el-button type="primary" @click="plus">测试 加一</el-button>
+  </div>
   <div class="pt-6">
     COMBOBOX
     <div class="mx-auto w-44 relative">
@@ -20,21 +23,29 @@
       </ul>
     </div>
   </div>
-  <button class="rounded-lg px-4 my-6 py-2 bg-blue-500 hover:bg-blue-600 text-white" @click="plus">加一</button>
 </template>
 <script lang="ts" setup>
-  import { ref, toRefs, reactive, watch, watchEffect } from 'vue';
+  import { toRefs, reactive, watch, watchEffect } from 'vue';
   import { useStore } from '@/store';
   const store = useStore();
-  console.log('res: ', store.state.count);
 
   const plus = () => {
     store.commit('plusOne');
     console.log(store.getters.getCount);
   }
-  const myRef = ref(null);
   // select data
-  const data = reactive({
+  type Obj = {
+    id: number,
+    name: string,
+    value: string
+  }
+  interface Data {
+    show: boolean,
+    mod: string,
+    emojiData: Obj[],
+    filterdData: Obj[],
+  }
+  const data: Data = reactive({
     show: false,
     mod: '',
     emojiData: [
@@ -74,7 +85,7 @@
       data.show = false;
     }
   }
-  const confrim = (val) => {
+  const confrim = (val: string) => {
     data.mod = val;
     data.filterdData = data.emojiData;
     data.show = false;
@@ -88,7 +99,7 @@
       return item.name.toLowerCase().includes(data.mod.toLowerCase()) || item.value === data.mod;
     });
   });
-  const { show, mod, emojiData, filterdData } = toRefs(data);
+  const { show, mod, filterdData } = toRefs(data);
 </script>
 <style scoped>
   select {
