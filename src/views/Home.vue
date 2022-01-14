@@ -1,11 +1,11 @@
 <template>
   <div class="pt-5">
-    <span class="title">我是标题, 使用v-bind.  平均值: {{ averageNum }}</span>
+    <span :class="home.title">我是标题, 使用v-bind.  平均值: {{ averageNum }}</span>
     <p class="my-4">
       <button class="bg-green-500 hover:bg-green-600 px-6 py-3 text-white border-none" @click="pushNum">push</button>
     </p>
     <p class="mt-4">
-      <input class="input" type="text" v-my-directive="averageNum" placeholder="测试自定义指令"/>
+      <input :class="home.input" type="text" v-my-directive="averageNum" placeholder="测试自定义指令"/>
     </p>
     <div class="mt-4">
       <el-button type="primary">Primary</el-button>
@@ -54,7 +54,7 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" module="home">
   .input {
     border: 1px solid #000;
     border-radius: 5px;
