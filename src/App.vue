@@ -29,4 +29,19 @@ html, body {
 .mui-active {
   background-color: black;
 }
+/* 设置选中后文本的背景颜色和文字颜色 */
+::selection {
+  background:#78BB7A; 
+  color:#fff;
+}
+
+::-moz-selection {
+  background:#78BB7A; 
+  color:#fff;
+}
+
+::-webkit-selection {
+  background:#78BB7A; 
+  color:#fff;
+}
 </style>
