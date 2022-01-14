@@ -1,6 +1,6 @@
 <template>
   <div id="header" class="w-full flex flex-row justify-center align-center bg-gray-800">
-    <div class="text-white font-black mr-12 text-xl my-4">
+    <div class="text-white font-black mr-12 text-xl my-4 pointer-style" @click="toHome">
       欢迎来到我的世界 {{ title }}!
     </div>
     <button class="text-white rounded-lg mx-2 my-4 hover:bg-gray-700">
@@ -25,10 +25,17 @@
 </template>
 <script lang="ts" setup>
   import { ref } from 'vue';
-
+  import { useRouter, useRoute } from 'vue-router';
+  const router = useRouter();
+  const route = useRoute();
+  
   const title = ref ('塞尔达');
+  // 回首页
+  const toHome = () => {
+    router.push('/');
+  }
 </script>
-<style scoped>
+<style scoped lang="scss">
   #header {
     position: sticky;
     top: 0;
