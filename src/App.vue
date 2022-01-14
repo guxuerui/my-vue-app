@@ -48,4 +48,7 @@ html, body {
   background:#78BB7A; 
   color:#fff;
 }
+.el-header, .el-main {
+  padding: 0 !important;
+}
 </style>
