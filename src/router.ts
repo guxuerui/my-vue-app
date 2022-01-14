@@ -77,5 +77,10 @@ const router = createRouter({
     }
   }
 });
-
+/**
+ * 路由错误回调
+ */
+ router.onError((handler) => {
+  console.log("error:", handler);
+});
 export default router;
