@@ -14,10 +14,21 @@ import Header from './components/Header.vue'
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: 'Rubik', sans-serif;
+  --font-serif: 'Cardo', serif;
+}
+* {
+  box-sizing: border-box;
+}
 html, body {
   margin: 0;
   padding: 0;
   background-color: deepskyblue;
+  height: 100%;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
