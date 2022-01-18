@@ -13,7 +13,7 @@
 import Header from './components/Header.vue'
 </script>
 
-<style>
+<style lang="scss">
 html, body {
   margin: 0;
   padding: 0;
