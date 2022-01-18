@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 // 路由懒加载
 const Home = () => import('@views/Home.vue');
-const Hello = () =>  import('@c/HelloWorld.vue');
+const Example = () =>  import('@c/Example.vue');
 const About = () =>  import('@views/About.vue');
 const Team = () =>  import('@views/Team.vue');
 const Blog = () =>  import('@views/Blog.vue');
@@ -20,9 +20,9 @@ const router = createRouter({
       component: Home
     },
     {
-      path: '/hello',
-      name: 'hello',
-      component: Hello
+      path: '/example',
+      name: 'example',
+      component: Example
     },
     {
       path: '/about',
