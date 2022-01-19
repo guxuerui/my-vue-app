@@ -1,6 +1,6 @@
 <template>
   <main class="page-content">
-    <div class="card" v-for="(item, index) in cards" :key="index">
+    <div class="card" v-for="item in cards" :key="item.id">
       <div class="content">
         <h2 class="title">{{ item.title }}</h2>
         <p class="copy">{{ item.copy }}</p>
@@ -18,7 +18,8 @@ import http from '@/http/request';
     title: string,
     name: string,
     copy: string,
-    button: string
+    button: string,
+    id: number
   }
   interface Data {
     cards: Obj[]

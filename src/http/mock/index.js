@@ -23,30 +23,35 @@ export default [
 			data: {
         list: [
           {
+            id: 1,
             title: 'Heart',
             name: 'heart',
             copy: '这是一个心跳形态的loading动画.',
             button: '预览'
           },
           {
+            id: 2,
             title: 'Heart',
             name: 'heart',
             copy: '这是一个心跳形态的loading动画.',
             button: '预览'
           },
           {
+            id: 3,
             title: 'Heart',
             name: 'heart',
             copy: '这是一个心跳形态的loading动画.',
             button: '预览'
           },
           {
+            id: 4,
             title: 'Heart',
             name: 'heart',
             copy: '这是一个心跳形态的loading动画.',
             button: '预览'
           },
           {
+            id: 5,
             title: 'Heart',
             name: 'heart',
             copy: '这是一个心跳形态的loading动画.',
