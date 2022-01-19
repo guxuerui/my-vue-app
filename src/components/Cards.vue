@@ -68,8 +68,8 @@ import { reactive, toRefs, toRaw } from "@vue/reactivity";
 </script>
 
 <style lang="scss" scoped>
-  $imageIds: '1517021897933-0e0319cfbc28', '1533903345306-15d1c30952de', '1545243424-0ce743321e11', '1531306728370-e2ebd9d7bb99', '1642237776222-8f56e872c0e3';
-
+  $imageIds: '1517021897933-0e0319cfbc28', '1533903345306-15d1c30952de', '1545243424-0ce743321e11', '1531306728370-e2ebd9d7bb99', '1605993046380-f1b1409606a6';
+  
   $bp-md: 600px;
   $bp-lg: 800px;
 
@@ -81,7 +81,7 @@ import { reactive, toRefs, toRaw } from "@vue/reactivity";
     display: grid;
     grid-gap: 1rem;
     padding: 1rem;
-    max-width: 1024px;
+    max-width: 2048px;
     margin: 0 auto;
     font-family: var(--font-sans);
     
