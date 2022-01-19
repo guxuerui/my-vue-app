@@ -24,7 +24,7 @@
     }
   }
   const routerData: Router = reactive({
-    title: '下饭达人',
+    title: '专注前端开发',
     datas: [
       {
         name: 'DashBoard',

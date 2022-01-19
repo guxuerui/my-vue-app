@@ -11,7 +11,8 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, toRefs, toRaw } from "@vue/reactivity";
+import { reactive, toRefs, toRaw, onMounted } from "vue";
+import http from '@/http/request';
   // select data
   type Obj = {
     title: string,
@@ -23,39 +24,13 @@ import { reactive, toRefs, toRaw } from "@vue/reactivity";
     cards: Obj[]
   }
   const data: Data = reactive({
-    cards: [
-      {
-        title: 'Heart',
-        name: 'heart',
-        copy: '这是一个心跳形态的loading动画.',
-        button: '预览'
-      },
-      {
-        title: 'Heart',
-        name: 'heart',
-        copy: '这是一个心跳形态的loading动画.',
-        button: '预览'
-      },
-      {
-        title: 'Heart',
-        name: 'heart',
-        copy: '这是一个心跳形态的loading动画.',
-        button: '预览'
-      },
-      {
-        title: 'Heart',
-        name: 'heart',
-        copy: '这是一个心跳形态的loading动画.',
-        button: '预览'
-      },
-      {
-        title: 'Heart',
-        name: 'heart',
-        copy: '这是一个心跳形态的loading动画.',
-        button: '预览'
-      },
-    ]
+    cards: []
   });
+  // 初始化mounted, 加载卡片数据
+  onMounted(async () => {
+    const resData = await http.get('/getCardsData');
+    data.cards = resData.data.list;
+  })
 
   const getPagePath = (item: any) => {
     // http://htmlpreview.github.io:  可生成动态预览页面
@@ -68,8 +43,9 @@ import { reactive, toRefs, toRaw } from "@vue/reactivity";
 </script>
 
 <style lang="scss" scoped>
+  // 图片路径Id
   $imageIds: '1517021897933-0e0319cfbc28', '1533903345306-15d1c30952de', '1545243424-0ce743321e11', '1531306728370-e2ebd9d7bb99', '1605993046380-f1b1409606a6';
-  
+
   $bp-md: 600px;
   $bp-lg: 800px;
 

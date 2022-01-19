@@ -8,7 +8,7 @@
       <input :class="home.input" type="text" v-my-directive="averageNum" placeholder="测试自定义指令"/>
     </p>
     <div class="mt-4">
-      <el-button type="primary">Primary</el-button>
+      <el-button type="primary" @click="getLogin">点击登录</el-button>
       <el-button type="warning" :icon="Star" circle></el-button>
       <el-button type="text">TEXT BUTTON</el-button>
     </div>
@@ -17,6 +17,8 @@
 <script lang="ts" setup>
   import { Star } from '@element-plus/icons-vue'
   import { reactive, computed, toRefs } from 'vue';
+  import http from '@/http/request';
+  // 需要从 import.meta中获取环境变量, 比如 import.meta.env.VITE_TOKEN
   // 自定义指令
   const vMyDirective = {
     mounted: (el: { focus: () => void; }, binding: { value: number; }) => {
@@ -48,6 +50,12 @@
   // 更新numbers数组
   const pushNum = () => {
     theme.numbers.push(theme.numbers.length + 1);
+  }
+  // 模拟登录接口
+  const getLogin = () => {
+    http.post('/login').then((res: any) => {
+      console.log(res);
+    });
   }
 
   const { averageNum } = toRefs(theme);

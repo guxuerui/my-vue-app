@@ -1,17 +1,25 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from "path"
+import { viteMockServe } from 'vite-plugin-mock';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue({
-    template: {
-      compilerOptions: {
-        // 自定义组件白名单, 如下例: piechart 标签不会报出警告信息
-        isCustomElement: tag => tag === 'piechart'
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          // 自定义组件白名单, 如下例: piechart 标签不会报出警告信息
+          isCustomElement: tag => tag === 'piechart'
+        }
       }
-    }
-  })],
+    }),
+    // mock配置
+    viteMockServe({
+      mockPath: "/src/http/mock",
+      localEnabled: true
+    })
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
