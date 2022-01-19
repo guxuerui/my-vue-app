@@ -31,9 +31,9 @@ export default [
           },
           {
             id: 2,
-            title: 'Heart',
-            name: 'heart',
-            copy: '这是一个心跳形态的loading动画.',
+            title: 'Dynamic Login Page',
+            name: 'dynamic-login',
+            copy: '这是一个有简单的动态变化效果的登录页面.',
             button: '预览'
           },
           {
