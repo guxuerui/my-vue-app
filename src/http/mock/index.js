@@ -28,7 +28,7 @@ export default [
             codeSrc: 'https://github.com/guxuerui/example-html-css/tree/main/heart',
             title: 'Heart',
             name: 'heart',
-            desc: '心跳形态的loading动画.'
+            desc: '心跳形态的loading动画'
           },
           {
             id: 2,
@@ -36,15 +36,15 @@ export default [
             codeSrc: 'https://github.com/guxuerui/example-html-css/tree/main/dynamic-login',
             title: 'Dynamic Login Page',
             name: 'dynamic-login',
-            desc: '有简单的动态变化效果的登录页面.'
+            desc: '有简单的动态变化效果的登录页面'
           },
           {
             id: 3,
-            src: 'https://s2.loli.net/2022/01/22/ENAzy8cMY6LwjXI.png',
-            codeSrc: 'https://github.com/guxuerui/example-html-css/tree/main/heart',
-            title: 'Heart',
-            name: 'heart',
-            desc: '这是一个心跳形态的loading动画.'
+            src: 'https://s2.loli.net/2022/01/22/1eIKwk5bXLaWJMy.png',
+            codeSrc: 'https://github.com/guxuerui/example-html-css/tree/main/space-login',
+            title: 'Space Login Page',
+            name: 'space-login',
+            desc: '超时空背景动画登录页面'
           },
           {
             id: 4,
