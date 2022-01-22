@@ -1,11 +1,11 @@
 <template>
   <div class="mt-4">
-    <Cards></Cards>
+    <new-cards></new-cards>
   </div>
 </template>
 
 <script lang="ts" setup>
-  import Cards from '@c/Cards.vue';
+  import NewCards from '@c/NewCards.vue';
 </script>
 
 <style scoped>

@@ -24,38 +24,43 @@ export default [
         list: [
           {
             id: 1,
+            src: 'https://s2.loli.net/2022/01/22/ENAzy8cMY6LwjXI.png',
+            codeSrc: 'https://github.com/guxuerui/example-html-css/tree/main/heart',
             title: 'Heart',
             name: 'heart',
-            copy: '这是一个心跳形态的loading动画.',
-            button: '预览'
+            desc: '心跳形态的loading动画.'
           },
           {
             id: 2,
+            src: 'https://s2.loli.net/2022/01/22/mh3JwfOTFyDvj5L.png',
+            codeSrc: 'https://github.com/guxuerui/example-html-css/tree/main/dynamic-login',
             title: 'Dynamic Login Page',
             name: 'dynamic-login',
-            copy: '这是一个有简单的动态变化效果的登录页面.',
-            button: '预览'
+            desc: '有简单的动态变化效果的登录页面.'
           },
           {
             id: 3,
+            src: 'https://s2.loli.net/2022/01/22/ENAzy8cMY6LwjXI.png',
+            codeSrc: 'https://github.com/guxuerui/example-html-css/tree/main/heart',
             title: 'Heart',
             name: 'heart',
-            copy: '这是一个心跳形态的loading动画.',
-            button: '预览'
+            desc: '这是一个心跳形态的loading动画.'
           },
           {
             id: 4,
+            src: 'https://s2.loli.net/2022/01/22/ENAzy8cMY6LwjXI.png',
+            codeSrc: 'https://github.com/guxuerui/example-html-css/tree/main/heart',
             title: 'Heart',
             name: 'heart',
-            copy: '这是一个心跳形态的loading动画.',
-            button: '预览'
+            desc: '这是一个心跳形态的loading动画.'
           },
           {
             id: 5,
+            src: 'https://s2.loli.net/2022/01/22/ENAzy8cMY6LwjXI.png',
+            codeSrc: 'https://github.com/guxuerui/example-html-css/tree/main/heart',
             title: 'Heart',
             name: 'heart',
-            copy: '这是一个心跳形态的loading动画.',
-            button: '预览'
+            desc: '这是一个心跳形态的loading动画.'
           },
         ]
 			}

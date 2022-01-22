@@ -23,10 +23,10 @@ import Header from './components/Header.vue'
 }
 * {
   box-sizing: border-box;
-}
-html, body {
   margin: 0;
   padding: 0;
+}
+html, body {
   background-color: deepskyblue;
   height: 100%;
 }
