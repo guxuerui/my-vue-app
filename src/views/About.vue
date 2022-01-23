@@ -33,7 +33,7 @@
     <button class="btn-loading">Hover Me</button>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
   import { reactive, computed, readonly, isReactive, isReadonly, defineAsyncComponent } from 'vue';
   import TransitionTest from '@c/TransitionTest.vue';
   import Functional from '@c/Functional.vue';
@@ -44,8 +44,15 @@
     delay: 200,
     timeout: 3000
   });
+  
+  interface State {
+    count: number;
+    double: number;
+    aboutMsg: string;
+    level: number;
+  }
   // 定义响应式对象
-  const state = reactive({
+  const state: State = reactive({
     count: 0,
     double: computed(() => state.count * 3),
     aboutMsg: 'This is an about page',
@@ -53,7 +60,7 @@
   })
   function increment () {
     state.count++;
-    only.age++;
+    // only.age++; 报错: 无法分配到 "age" ，因为它是只读属性。 
   }
 
   const test = reactive({
