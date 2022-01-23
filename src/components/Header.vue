@@ -61,7 +61,8 @@
 </script>
 <style scoped lang="scss">
   #header {
-    position: sticky;
+    // position: sticky;
+    position: fixed;
     top: 0;
     z-index: 99;
   }
