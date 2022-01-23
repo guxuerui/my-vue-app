@@ -20,7 +20,7 @@
         <p>loading...</p>
       </template>
     </suspense>
-    <h1>ddd</h1>
+
     <!-- 自定义组件白名单, 在vite.config.ts中配置 -->
     <piechart>自定义组件白名单</piechart>
 
@@ -31,6 +31,11 @@
     <transition-test></transition-test>
     
     <button class="btn-loading">Hover Me</button>
+    <!-- ts -->
+    <h1 class="text-blue-500 text-2xl mt-4">**使用TS语法 interface**</h1>
+    <div v-for="item in todos" :key="item.id">
+      {{ item.name }}
+    </div>
   </div>
 </template>
 <script setup lang="ts">
@@ -73,8 +78,19 @@
   console.log('是否由reactive创建：', isReactive(test));
   console.log('是否由readonly创建：', isReadonly(only));
   console.log('是否由readonly创建：', isReadonly(test));
-
-
+  // 使用ts语法
+  interface Todos {
+    id: number;
+    name: string;
+    completed: boolean;
+  }
+  const todos = reactive<Todos[]>([
+    { id: 1, name: 'Learn Vue', completed: false },
+    { id: 2, name: 'Learn Vuex', completed: false },
+    { id: 3, name: 'Learn VueRouter', completed: false },
+    { id: 4, name: 'Learn VuePress', completed: false },
+    { id: 5, name: 'Learn Vue-cli', completed: false },
+  ]);
 </script>
 <style scoped>
   .btn-loading {
