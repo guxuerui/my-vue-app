@@ -1,31 +1,36 @@
 <template>
   <div id="header" class="w-full flex flex-row justify-center align-center bg-gray-800">
     <div class="text-white font-black mr-12 text-xl my-4 pointer-style" @click="toHome">
-      {{ title }}
+      <span :style="{color: titleInfo.color}">{{ titleInfo.value }}</span>
     </div>
     <button
       class="text-white rounded-lg mx-2 my-4 hover:bg-gray-700"
-      v-for="(item, index) in datas" :key="index"
+      v-for="(item, index) in routerData" :key="index"
     >
       <router-link :to="item.path" class="p-2 font-black rounded-lg">{{ item.name }}</router-link>
     </button>
   </div>
 </template>
 <script lang="ts" setup>
-  import { reactive, toRefs } from 'vue';
+  import { reactive, PropType } from 'vue';
   import { useRouter, useRoute } from 'vue-router';
+  import { TitleInfo, Router } from '@/types/header';
   const router = useRouter();
   const route = useRoute();
-  
-  interface Router {
-    title: string,
-    datas: {
-      [key: string]: any
+  // 标题内容, 定义Props数据
+  defineProps({
+    titleInfo: {
+      type: Object as PropType<TitleInfo>, // vue定义好的泛型 -> PropType<T>
+      required: true,
+      default: () => ({
+        value: '前端小菜鸟',
+        color: '#fff',
+      })
     }
-  }
-  const routerData: Router = reactive({
-    title: '专注前端开发',
-    datas: [
+  });
+  // 路由数据
+  const routerData = reactive<Router[]>(
+    [
       {
         name: 'DashBoard',
         path: '/'
@@ -51,13 +56,12 @@
         path: '/about'
       }
     ]
-  })
+  )
   // 回首页
   const toHome = () => {
     router.push('/');
   }
 
-  const { title, datas } = toRefs(routerData);
 </script>
 <style scoped lang="scss">
   #header {
