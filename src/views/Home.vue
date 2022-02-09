@@ -18,6 +18,9 @@
   import { Star } from '@element-plus/icons-vue'
   import { reactive, computed, toRefs } from 'vue';
   import http from '@/http/request';
+  // 引入转换color颜色库, github地址: https://github.com/bgrins/TinyColor
+  import tinycolor from 'tinycolor2';
+  console.log('转换的color: ', tinycolor("#326cd6").lighten(40).toHexString());
   // 需要从 import.meta中获取环境变量, 比如 import.meta.env.VITE_TOKEN
   // 自定义指令
   const vMyDirective = {
