@@ -15,7 +15,7 @@ export default [
   {
 		url: "/api/getCardsData",
 		method: "get", // 请求方式
-		timeout: 2 * 1000, // 超时时间
+		timeout: 1 * 1000, // 超时时间
 		statusCode: 200, // 返回的http状态码
 		response: { // 返回的结果集
 			code: 200,
@@ -52,7 +52,7 @@ export default [
             codeSrc: 'https://github.com/guxuerui/example-html-css/tree/main/heart',
             title: 'Heart',
             name: 'heart',
-            desc: '这是一个心跳形态的loading动画.'
+            desc: '心跳形态的loading动画'
           },
           {
             id: 5,
@@ -60,7 +60,7 @@ export default [
             codeSrc: 'https://github.com/guxuerui/example-html-css/tree/main/heart',
             title: 'Heart',
             name: 'heart',
-            desc: '这是一个心跳形态的loading动画.'
+            desc: '心跳形态的loading动画'
           },
         ]
 			}

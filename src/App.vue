@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <el-header>
-      <Header :title-info="{value: '专注前端开发', color: '#fba'}"/>
+      <Header :title-info="{value: '前端emo君', color: '#fba'}"/>
     </el-header>
     <el-main>
       <router-view></router-view>
