@@ -40,7 +40,7 @@
   }
   #smallImg {
     width: 500px;
-    height: 400px;
+    height: 333px;
   }
 
   .pointer-style {
