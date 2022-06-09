@@ -25,7 +25,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-  import { toRefs, reactive, watch, watchEffect } from 'vue';
+  import { toRefs, reactive, watchEffect } from 'vue';
   import { useStore } from '@/store';
   const store = useStore();
 
