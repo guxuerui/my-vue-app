@@ -4,3 +4,4 @@ declare module '*.vue' {
   export default component
 }
 declare module 'tinycolor2'
+declare module 'marked';

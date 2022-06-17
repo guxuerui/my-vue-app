@@ -12,11 +12,15 @@
       <el-button type="warning" :icon="Star" circle></el-button>
       <el-button type="text">TEXT BUTTON</el-button>
     </div>
+    <div>{{ mstr }}</div>
+    <textarea v-model.trim="mstr" style="padding: 10px;width: 400px;min-height: 20vh;border: 1px solid #ccc"></textarea>
+    <div class="mt-4" v-html="markdownHtml"></div>
   </div>
 </template>
 <script lang="ts" setup>
   import { Star } from '@element-plus/icons-vue'
-  import { reactive, computed, toRefs } from 'vue';
+  import { reactive, computed, toRefs, ref } from 'vue';
+  import { marked } from 'marked';
   import http from '@/http/request';
   // 引入转换color颜色库, github地址: https://github.com/bgrins/TinyColor
   import tinycolor from 'tinycolor2';
@@ -62,6 +66,11 @@
   }
 
   const { averageNum } = toRefs(theme);
+
+  const mstr = ref(`# Marked in **Node.js**`);
+  const markdownHtml = computed(() => {
+    return marked.parse(mstr.value);
+  })
 
 </script>
 
