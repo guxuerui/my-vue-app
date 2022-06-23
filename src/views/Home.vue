@@ -12,16 +12,20 @@
       <el-button type="warning" :icon="Star" circle></el-button>
       <el-button type="text">TEXT BUTTON</el-button>
     </div>
-    <div>{{ mstr }}</div>
-    <textarea v-model.trim="mstr" style="padding: 10px;width: 400px;min-height: 20vh;border: 1px solid #ccc"></textarea>
-    <div class="mt-4" v-html="markdownHtml"></div>
+    <!-- <div>{{ mstr }}</div> -->
+    <!-- <textarea v-model.trim="mstr" style="padding: 10px;width: 400px;min-height: 20vh;border: 1px solid #ccc"></textarea> -->
+    <!-- <div class="mt-4" v-html="markdownHtml"></div> -->
   </div>
+  <article class="mt-4" v-highlight v-html="markdownhtml"></article>
 </template>
 <script lang="ts" setup>
   import { Star } from '@element-plus/icons-vue'
   import { reactive, computed, toRefs, ref } from 'vue';
   import { marked } from 'marked';
   import http from '@/http/request';
+  import { html } from '@/markdown/test.md';
+  import hljs from "highlight.js"; // 添加转换高亮标签插件
+  // import "vue-hljs/dist/style.css"; // 添加hljs默认样式
   // 引入转换color颜色库, github地址: https://github.com/bgrins/TinyColor
   import tinycolor from 'tinycolor2';
   console.log('转换的color: ', tinycolor("#326cd6").lighten(40).toHexString());
@@ -33,6 +37,16 @@
       el.focus();
     }
   }
+  // 在vue3内，通过自定义指令来锁定高亮渲染标签的范围
+  const vHighlight = {
+    mounted(el: any) {
+      const blocks = el.querySelectorAll('pre code'); // 匹配pre标签，code标签
+      blocks.forEach((block: any) => {
+        hljs.highlightBlock(block);
+      });
+    }
+  };
+  const markdownhtml = ref(html)
 
   // 求平均值 function average
   function average (arr: number[]) {
@@ -67,10 +81,10 @@
 
   const { averageNum } = toRefs(theme);
 
-  const mstr = ref(`# Marked in **Node.js**`);
-  const markdownHtml = computed(() => {
-    return marked.parse(mstr.value);
-  })
+  // const mstr = ref(`# Marked in **Node.js**`);
+  // const markdownHtml = computed(() => {
+    // return marked.parse(mstr.value);
+  // })
 
 </script>
 

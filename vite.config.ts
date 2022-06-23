@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from "path"
 import { viteMockServe } from 'vite-plugin-mock';
+const mdPlugin = require('vite-plugin-markdown') // 需要通过commenJs方式引用
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,6 +14,9 @@ export default defineConfig({
           isCustomElement: tag => tag === 'piechart'
         }
       }
+    }),
+    mdPlugin.plugin({
+      mode: ['html'],
     }),
     // mock配置
     viteMockServe({
