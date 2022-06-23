@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-5">
+  <div class="pt-5 home-container">
     <span :class="home.title">我是一个标题, 使用v-bind.  平均值: {{ averageNum }}</span>
     <p class="my-4">
       <button class="bg-green-500 hover:bg-green-600 px-6 py-3 text-white border-none" @click="pushNum">push</button>
@@ -15,8 +15,8 @@
     <!-- <div>{{ mstr }}</div> -->
     <!-- <textarea v-model.trim="mstr" style="padding: 10px;width: 400px;min-height: 20vh;border: 1px solid #ccc"></textarea> -->
     <!-- <div class="mt-4" v-html="markdownHtml"></div> -->
+    <article class="mt-4 article" v-highlight v-html="markdownhtml"></article>
   </div>
-  <article class="mt-4" v-highlight v-html="markdownhtml"></article>
 </template>
 <script lang="ts" setup>
   import { Star } from '@element-plus/icons-vue'

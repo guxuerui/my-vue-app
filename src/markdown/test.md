@@ -13,8 +13,9 @@ Vite is an opinionated web dev build tool that serves your code via native ES Mo
 
 ## 成功了吗
 好像是成了。
-```javascript
+```js
   function twoSum () {
     console.log('222');
   }
 ```
+
