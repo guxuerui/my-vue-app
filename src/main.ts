@@ -9,12 +9,19 @@ import { store, key } from '@/store';
 const app = createApp(App);
 app.use(router).use(store, key).use(ElementPlus);
 app.mount('#app');
-// 实例方法定义组件 component
+
+// 自定义全局组件 -> JSX
 app.component('comp', {
   render () {
-    return h('div', 'I am a comp, 通过实例方法自定义组件完成!!!');
+    return h(
+      'div',
+      Array.from({ length: 10 }).map(() => {
+        return h('p', 'Hi,I am a comp, 通过实例方法自定义组件完成!!!')
+      })
+    );
   }
 })
+
 // 自定义指令, API如下
 // const MyDirective = {
 //   created(el, binding, vnode, prevVnode) {}, // 新增
@@ -25,10 +32,12 @@ app.component('comp', {
 //   beforeUnmount() {}, // 新增
 //   unmounted() {}
 // }
-app.directive('highlight', {
+
+app.directive('colorizer', {
   beforeMount (el, binding, vnode) {
     // el.style.background = binding.value;
-    console.log('组件实例：', binding.instance);
+    console.log('组件实例：', binding.instance, binding.value, vnode);
     el.style.color = binding.value;
   }
 })
+

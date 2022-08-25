@@ -12,16 +12,14 @@
       <el-button type="warning" :icon="Star" circle></el-button>
       <el-button type="text">TEXT BUTTON</el-button>
     </div>
-    <!-- <div>{{ mstr }}</div> -->
-    <!-- <textarea v-model.trim="mstr" style="padding: 10px;width: 400px;min-height: 20vh;border: 1px solid #ccc"></textarea> -->
-    <!-- <div class="mt-4" v-html="markdownHtml"></div> -->
     <article class="mt-4 article" v-highlight v-html="markdownhtml"></article>
+    <comp v-colorizer="'green'"></comp>
   </div>
 </template>
+
 <script lang="ts" setup>
   import { Star } from '@element-plus/icons-vue'
-  import { reactive, computed, toRefs, ref } from 'vue';
-  import { marked } from 'marked';
+  import { reactive, computed, toRefs, ref, isRef } from 'vue';
   import http from '@/http/request';
   import { html } from '@/markdown/test.md';
   import hljs from "highlight.js"; // 添加转换高亮标签插件
@@ -47,11 +45,13 @@
     }
   };
   const markdownhtml = ref(html)
+  console.log('是ref吗: ', isRef(markdownhtml))
 
   // 求平均值 function average
   function average (arr: number[]) {
     return arr.reduce((a, b) => a + b, 0) / arr.length;
   }
+  console.log('是ref吗: ', isRef(average))
 
   // 定义响应式对象
   // 状态驱动的动态 CSS
@@ -85,7 +85,6 @@
   // const markdownHtml = computed(() => {
     // return marked.parse(mstr.value);
   // })
-
 </script>
 
 <style lang="scss" module="home">

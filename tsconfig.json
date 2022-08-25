@@ -17,11 +17,6 @@
       "@c/*": ["./src/components/*"],
       "@views/*": ["./src/views/*"],
       "@utils/*": ["./src/utils/*"]
-      // "@/styles/*": ["./src/styles/*"],
-      // "@/assets/*": ["./src/assets/*"],
-      // "@/pages/*": ["./src/pages/*"],
-      // "@/routes/*": ["./src/routes/*"],
-      // "@/store/*": ["./src/store/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
