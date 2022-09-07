@@ -1,0 +1,49 @@
+<script setup lang="ts">
+import { onMounted } from 'vue'
+
+const el = $ref<HTMLCanvasElement>()
+const ctx = $computed(() => el!.getContext('2d')!)
+
+function drawLine() {
+  ctx.beginPath()
+  ctx.moveTo(0, 0)
+  ctx.lineTo(60, 80)
+  ctx.lineTo(60, 20)
+  ctx.lineWidth = 5 
+  ctx.strokeStyle = '#29f'
+  ctx.lineCap = 'round'
+  ctx.stroke()
+  ctx.closePath()
+}
+
+function drawCircle(x: number, y: number, radius: number, color: string) {
+  ctx.beginPath()
+  ctx.arc(x, y, radius, 0, 2 * Math.PI)
+  // ctx.stroke()
+  ctx.fillStyle = color
+  ctx.fill()
+}
+
+function drawRect() {
+  ctx.strokeStyle = '#1fa'
+  ctx.strokeRect(100, 20, 80, 40)
+  ctx.fillStyle = '#9fa'
+  ctx.fillRect(100, 20, 80, 40)
+}
+
+onMounted(() => {
+  // 清空画布
+  ctx.clearRect(0, 0, 400, 400)
+  drawLine()
+  drawCircle(240, 40, 30, '#1fa')
+  drawRect()
+})
+</script>
+
+<template>
+  <canvas width="400" height="400" ref="el" style="border: 1px solid #585" class="mt-8" />
+</template>
+
+<style scoped>
+  
+</style>

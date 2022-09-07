@@ -14,6 +14,7 @@
     </div>
     <article class="mt-4 article" v-highlight v-html="markdownhtml"></article>
     <comp v-colorizer="'green'"></comp>
+    <canvas-example></canvas-example>
   </div>
 </template>
 
@@ -23,6 +24,7 @@
   import http from '@/http/request';
   import { html } from '@/markdown/test.md';
   import hljs from "highlight.js"; // 添加转换高亮标签插件
+  import CanvasExample from '@c/CanvasExample.vue'
   // import "vue-hljs/dist/style.css"; // 添加hljs默认样式
   // 引入转换color颜色库, github地址: https://github.com/bgrins/TinyColor
   import tinycolor from 'tinycolor2';

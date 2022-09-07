@@ -8,6 +8,7 @@ const mdPlugin = require('vite-plugin-markdown') // 需要通过commenJs方式�
 export default defineConfig({
   plugins: [
     vue({
+      reactivityTransform: true,
       template: {
         compilerOptions: {
           // 自定义组件白名单, 如下例: piechart 标签不会报出警告信息
