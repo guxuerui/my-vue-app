@@ -45,17 +45,30 @@ function drawTriangle() {
   ctx.stroke()
 }
 
+function drawRhombus() {
+  ctx.beginPath()
+  ctx.moveTo(380, 50)
+  ctx.lineTo(430, 80)
+  ctx.lineTo(480, 50)
+  ctx.lineTo(430, 20)
+  ctx.lineWidth = 5
+  ctx.strokeStyle = 'cyan'
+  ctx.closePath()
+  ctx.stroke()
+}
+
 onMounted(() => {
   // 清空画布
-  ctx.clearRect(0, 0, 400, 400)
+  ctx.clearRect(0, 0, 500, 500)
   drawLine()
   drawCircle(240, 40, 30, '#1fa')
   drawRect()
   drawTriangle()
+  drawRhombus()
 })
 </script>
 
 <template>
-  <canvas width="400" height="400" ref="el" style="border: 1px solid #585" class="mt-8" />
+  <canvas width="500" height="500" ref="el" style="border: 1px solid #585" class="mt-8" />
 </template>
 
