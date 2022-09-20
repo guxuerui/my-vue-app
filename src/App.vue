@@ -1,12 +1,13 @@
 <template>
-  <el-container>
-    <el-header>
-      <Header :title-info="{value: 'EMO', color: '#fba'}"/>
-    </el-header>
-    <el-main>
-      <router-view></router-view>
-    </el-main>
-  </el-container>
+  <!-- <el-container> -->
+  <!--   <el-header> -->
+  <!--     <Header :title-info="{value: 'EMO', color: '#fba'}"/> -->
+  <!--   </el-header> -->
+  <!--   <el-main> -->
+  <!--     <router-view /> -->
+  <!--   </el-main> -->
+  <!-- </el-container> -->
+  <router-view />
 </template>
 
 <script lang="ts" setup>
@@ -27,7 +28,7 @@ import Header from './components/Header.vue'
   padding: 0;
 }
 html, body {
-  background-color: deepskyblue;
+  /* background-color: deepskyblue; */
   height: 100%;
 }
 #app {
@@ -38,7 +39,7 @@ html, body {
   color: #2c3e50;
   width: 100%;
   min-height: 100vh;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 /* router-link激活时样式 */
 .mui-active {

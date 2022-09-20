@@ -9,6 +9,7 @@ const Connect = () =>  import('@views/Connect.vue');
 const PageNotFound = () =>  import('@c/PageNotFound.vue');
 const Todos = () =>  import('@c/Todos.vue');
 const VmodelTest = () =>  import('@c/VmodelTest.vue');
+const ThreeDGraph = () => import('@views/3dGraph.vue');
 
 const routerHistory = createWebHistory();
 const router = createRouter({
@@ -16,6 +17,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      redirect: '/3d-graph',
       name: 'home',
       component: Home
     },
@@ -28,6 +30,11 @@ const router = createRouter({
       path: '/about',
       name: 'about',
       component: About
+    },
+    {
+      path: '/3d-graph',
+      name: '3d-graph',
+      component: ThreeDGraph
     },
     {
       // 动态路由参数

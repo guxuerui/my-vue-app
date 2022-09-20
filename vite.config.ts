@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from "path"
 import { viteMockServe } from 'vite-plugin-mock';
+import basicSsl from '@vitejs/plugin-basic-ssl'
 const mdPlugin = require('vite-plugin-markdown') // 需要通过commenJs方式引用
 
 // https://vitejs.dev/config/
@@ -23,7 +24,8 @@ export default defineConfig({
     viteMockServe({
       mockPath: "/src/http/mock",
       localEnabled: true
-    })
+    }),
+    basicSsl(),
   ],
   resolve: {
     alias: {
@@ -38,6 +40,9 @@ export default defineConfig({
       // '@/hooks': path.resolve(__dirname, './src/hooks'),
       // '@/store': path.resolve(__dirname, './src/store')
     }
+  },
+  server: {
+    https: true
   }
   // server:{
   //   host:'localhost',        //设置本地服务器   选填

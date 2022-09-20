@@ -20,7 +20,7 @@
 
 <script lang="ts" setup>
   import { Star } from '@element-plus/icons-vue'
-  import { reactive, computed, toRefs, ref, isRef } from 'vue';
+  import { reactive, computed, toRefs, ref, isRef, onMounted } from 'vue';
   import http from '@/http/request';
   import { html } from '@/markdown/test.md';
   import hljs from "highlight.js"; // 添加转换高亮标签插件
@@ -87,6 +87,7 @@
   // const markdownHtml = computed(() => {
     // return marked.parse(mstr.value);
   // })
+
 </script>
 
 <style lang="scss" module="home">

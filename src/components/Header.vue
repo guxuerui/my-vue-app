@@ -54,6 +54,10 @@
       {
         name: '关于我',
         path: '/about'
+      },
+      {
+        name: '3DGraph',
+        path: '/3d-graph'
       }
     ]
   )
