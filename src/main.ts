@@ -5,14 +5,17 @@ import './index.css';
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import { store, key } from '@/store';
+// import { Vue3StatusIndicator } from 'vue3-status-indicator'
+import 'vue3-status-indicator/dist/style.css'
 
 const app = createApp(App);
+// app.component('vue3-status-indicator', Vue3StatusIndicator);
 app.use(router).use(store, key).use(ElementPlus);
 app.mount('#app');
 
 // 自定义全局组件 -> JSX
 app.component('comp', {
-  render () {
+  render() {
     return h(
       'div',
       Array.from({ length: 10 }).map(() => {
@@ -34,7 +37,7 @@ app.component('comp', {
 // }
 
 app.directive('colorizer', {
-  beforeMount (el, binding, vnode) {
+  beforeMount(el, binding, vnode) {
     // el.style.background = binding.value;
     console.log('组件实例：', binding.instance, binding.value, vnode);
     el.style.color = binding.value;

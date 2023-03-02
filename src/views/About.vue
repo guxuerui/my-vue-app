@@ -25,7 +25,7 @@
     <piechart>自定义组件白名单</piechart>
 
     <!-- 自定义指令 -->
-    <p v-highlight="'orange'">这是自定义指令的使用</p>
+    <!-- <p v-highlight="'orange'">这是自定义指令的使用</p> -->
 
     <!-- transition动画 -->
     <transition-test></transition-test>
@@ -36,12 +36,16 @@
     <div v-for="item in todos" :key="item.id">
       {{ item.name }}
     </div>
+
+    <button class="bg-green-500 text-white px-6 py-4" @click="openModal = true">展示弹窗</button>
+    <ModalButton :show="openModal" />
   </div>
 </template>
 <script setup lang="ts">
-  import { reactive, computed, readonly, isReactive, isReadonly, defineAsyncComponent } from 'vue';
+  import { reactive, computed, ref, readonly, isReactive, isReadonly, defineAsyncComponent } from 'vue';
   import TransitionTest from '@c/TransitionTest.vue';
   import Functional from '@c/Functional.vue';
+  import ModalButton from '@c/ModelButton.vue'
   // const AsyncComp = defineAsyncComponent(() => import('@c/NextPage.vue'));
   // defineAsyncComponent 还可接受返回一个对象
   const AsyncComp = defineAsyncComponent({
@@ -67,6 +71,8 @@
     state.count++;
     // only.age++; 报错: 无法分配到 "age" ，因为它是只读属性。 
   }
+
+  const openModal = ref(false)
 
   const test = reactive({
     name: 'llllfei'

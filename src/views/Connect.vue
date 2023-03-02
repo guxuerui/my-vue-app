@@ -1,8 +1,8 @@
 <template>
-  <div class="mt-4">
-    <el-button type="primary" @click="plus">测试 加一</el-button>
-  </div>
-  <div class="pt-6">
+  <!-- <div class="mt-4"> -->
+  <!--   <el-button type="primary" @click="plus">测试 加一</el-button> -->
+  <!-- </div> -->
+  <div class="my-6 text-center">
     COMBOBOX
     <div class="mx-auto w-44 relative">
       <input
@@ -21,6 +21,18 @@
         </li> 
         <li v-if="!filterdData.length" class="py-2 pl-2">暂无匹配数据</li>
       </ul>
+    </div>
+  </div>
+  <div class="container mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="bg-gray-200 p-4">
+        <h2 class="text-xl font-bold">Section 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="bg-gray-200 p-4">
+        <h2 class="text-xl font-bold">Section 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
     </div>
   </div>
 </template>

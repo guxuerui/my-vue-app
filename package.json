@@ -14,11 +14,13 @@
     "marked": "^4.0.17",
     "mitt": "^3.0.0",
     "mockjs": "^1.1.0",
+    "pretty-timeline": "^1.1.8",
     "sass": "^1.48.0",
     "tinycolor2": "^1.4.2",
     "vite-plugin-markdown": "^2.0.2",
     "vue": "^3.2.38",
     "vue-router": "^4.0.12",
+    "vue3-status-indicator": "^1.1.1",
     "vuex": "^4.0.2"
   },
   "devDependencies": {

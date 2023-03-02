@@ -10,6 +10,7 @@
         <img id="smallImg" class="pointer-style" :src="imageSrc" @click="clickImg($event)">
       </div>
     </div>
+    <RouterView />
   </div>
 </template>
 <script setup lang="ts">
