@@ -1,6 +1,6 @@
 # Vue 3 + Typescript + Vite
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+> TIP: **This project is used to experiment and test some new Vue APIs or ideas.**
 
 ## Recommended IDE Setup
 
