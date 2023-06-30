@@ -54,6 +54,10 @@
       {
         name: '关于我',
         path: '/about'
+      },
+      {
+        name: 'Vue3.3',
+        path: '/vue3-api'
       }
     ]
   )

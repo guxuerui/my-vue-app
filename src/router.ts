@@ -10,6 +10,7 @@ const PageNotFound = () => import('@c/PageNotFound.vue');
 const Todos = () => import('@c/Todos.vue');
 const VmodelTest = () => import('@c/VmodelTest.vue');
 const OpenAi = () => import('@views/openai.vue');
+const Vue3API = () => import('@views/Vue3.3.vue')
 
 const routerHistory = createWebHistory();
 const router = createRouter({
@@ -67,6 +68,11 @@ const router = createRouter({
       path: '/connect',
       name: 'connect',
       component: Connect
+    },
+    {
+      path: '/vue3-api',
+      name: 'Vue3.3',
+      component: Vue3API
     },
     {
       path: '/:pathMatch(.*)*',
