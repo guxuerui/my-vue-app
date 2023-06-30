@@ -22,7 +22,7 @@ export default defineConfig({
     // mock配置
     viteMockServe({
       mockPath: "/src/http/mock",
-      localEnabled: true
+      enable: true
     })
   ],
   resolve: {

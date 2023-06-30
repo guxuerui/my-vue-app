@@ -24,6 +24,7 @@
 <script setup lang="ts">
   import { reactive, toRefs, toRaw, onMounted } from 'vue';
   import http from '@/http/request';
+  import { useFetch } from '@vueuse/core'
 
   type Obj = {
     title: string,
@@ -42,8 +43,10 @@
   });
   // 初始化mounted, 加载卡片数据
   onMounted(async () => {
-    const resData = await http.get('/getCardsData');
-    data.cards = resData.data.list;
+    // const resData = await fetch('/getCardsData');
+    const { isFinished, error, data } = await useFetch('api/getCardsData').json()
+    console.log('[/Users/xueruigu/workspace/my-vue-app/src/components/NewCards.vue:47] isFinished: ', isFinished, error, data)
+    // data.cards = resData.data.list;
   });
 
   const getPagePath = (item: any) => {

@@ -52,10 +52,6 @@
         path: '/connect'
       },
       {
-        name: '示例',
-        path: '/example'
-      },
-      {
         name: '关于我',
         path: '/about'
       }
