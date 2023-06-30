@@ -7,3 +7,4 @@ declare module '*.vue' {
 declare module 'tinycolor2'
 declare module 'marked';
 declare module 'vue3-status-indicator'
+declare module 'nprogress'

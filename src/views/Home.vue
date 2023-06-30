@@ -11,7 +11,6 @@
     </p>
     <div class="mt-4">
       <el-button type="primary" @click="getLogin">点击登录</el-button>
-      <el-button type="warning" :icon="Star" circle></el-button>
       <el-button type="text">TEXT BUTTON</el-button>
     </div>
     <article class="mt-4 article" v-highlight v-html="markdownhtml"></article>
@@ -23,7 +22,6 @@
 
 <script lang="ts" setup>
   import { Vue3StatusIndicator } from 'vue3-status-indicator'
-  import { Star } from '@element-plus/icons-vue'
   import { reactive, computed, toRefs, ref, isRef } from 'vue';
   import http from '@/http/request';
   import { html } from '@/markdown/test.md';

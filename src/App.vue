@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <el-header>
-      <Header :title-info="{value: 'EMO', color: '#fba'}"/>
+      <Header :title-info="{value: 'QiShi', color: '#fba'}"/>
     </el-header>
     <el-main>
       <router-view></router-view>
@@ -10,7 +10,49 @@
 </template>
 
 <script lang="ts" setup>
+import { useThrottleFn } from '@vueuse/core'
 import Header from './components/Header.vue'
+import { onMounted } from 'vue'
+import { parseOpenAIStream } from '@/utils/openAi'
+import { Configuration, OpenAIApi } from "openai";
+import NProgress from 'nprogress'
+import "nprogress/nprogress.css"
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+router.beforeEach((to, from, next) => {
+  NProgress.start()  
+  next()
+})
+router.afterEach((to, from) => {
+  NProgress.done()
+})
+// function readStream() {
+//   const decoder = new TextDecoder('utf-8')
+//   const fileReader: any = requestChat()
+//   let done = false
+//   fileReader.read().then(({done, value }) => {
+//     if (done) {
+//       console.log('stream finished')
+//       return
+//     }
+//     const decoderValue = decoder.decode(value)
+//     output += decoderValue
+//
+//     readStream()
+//   })
+// }
+
+onMounted(async () => {
+  // const configuration = new Configuration({
+  //     organization: "org-pHFGMiraZCJOYx1x9LILtaII",
+  //     apiKey: import.meta.env.VITE_OPENAI_API_KEY,
+  // });
+  // const openai = new OpenAIApi(configuration) as any;
+  // const response = await openai.listEngines();
+  // console.log('[src/App.vue:23] response: ', response)
+  // requestChat()
+})
 </script>
 
 <style lang="scss">

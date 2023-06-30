@@ -36,6 +36,10 @@
         path: '/'
       },
       {
+        name: 'OPENAI',
+        path: '/openai'
+      },
+      {
         name: 'Team',
         path: '/team/front'
       },
