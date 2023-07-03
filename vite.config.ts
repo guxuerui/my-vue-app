@@ -14,6 +14,10 @@ export default defineConfig({
           // 自定义组件白名单, 如下例: piechart 标签不会报出警告信息
           isCustomElement: tag => tag === 'piechart'
         }
+      },
+      script: {
+        defineModel: true,
+        propsDestructure: true,
       }
     }),
     mdPlugin.plugin({
