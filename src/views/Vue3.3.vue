@@ -28,7 +28,7 @@ const msg = ref('Hi there~')
     <h1 class="mt-4">4. Set Slots</h1>
     <SetSlots>
       <template #default>default slot value</template>
-      <template #item>12</template>
+      <template #item="{ id }">接收从插槽传递过来的值 -> {{ id }}</template>
     </SetSlots>
   </div>
 </template>
