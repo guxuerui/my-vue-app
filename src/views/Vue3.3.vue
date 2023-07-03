@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import GenericComp from '@/components/GenericComp.vue'
 import DefineModelComp from '@/components/DefineModelComp.vue'
 import PropsDest from '@/components/PropsDest.vue'
+import SetSlots from '@/components/SetSlots.vue'
 
 const count = ref(0)
 const msg = ref('Hi there~')
@@ -23,5 +24,11 @@ const msg = ref('Hi there~')
       class="border-2 border-dashed border-purple-600 px-6 py-3 text-purple-600"
     >Reset Msg</button>
     <PropsDest :msg="msg"/>
+
+    <h1 class="mt-4">4. Set Slots</h1>
+    <SetSlots>
+      <template #default>default slot value</template>
+      <template #item>12</template>
+    </SetSlots>
   </div>
 </template>
