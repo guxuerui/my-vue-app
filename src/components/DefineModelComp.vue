@@ -1,5 +1,15 @@
 <script lang="ts" setup>
+import { watchEffect } from 'vue';
+
 const modelValue = defineModel<number>({default: 0})
+
+const emit = defineEmits<{
+  change: [count: number] // 具名元组语法
+}>()
+
+watchEffect(() => {
+  modelValue.value > 0 && emit('change', modelValue.value)
+})
 </script>
 
 <template>

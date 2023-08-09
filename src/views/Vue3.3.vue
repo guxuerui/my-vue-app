@@ -7,6 +7,10 @@ import SetSlots from '@/components/SetSlots.vue'
 
 const count = ref(0)
 const msg = ref('Hi there~')
+
+function handleChange(count: number) {
+  console.log('changed count is: ', count)
+}
 </script>
 
 <template>
@@ -16,7 +20,7 @@ const msg = ref('Hi there~')
 
     <h1 class="mt-4">2. defimeModel</h1>
     <h2>defineModel count: {{ count }}</h2>
-    <DefineModelComp v-model="count" />
+    <DefineModelComp v-model="count" @change="handleChange" />
 
     <h1 class="mt-4">3. Props Destructure</h1>
     <button
