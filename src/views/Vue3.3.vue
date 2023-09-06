@@ -6,7 +6,9 @@ import PropsDest from '@/components/PropsDest.vue'
 import SetSlots from '@/components/SetSlots.vue'
 
 const count = ref(0)
-const msg = ref('Hi there~')
+const msg = ref('Hi there xixi~')
+const name = ref('gxr')
+const age = ref(18)
 
 function handleChange(count: number) {
   console.log('changed count is: ', count)
@@ -27,7 +29,7 @@ function handleChange(count: number) {
       @click="msg = 'new'"
       class="border-2 border-dashed border-purple-600 px-6 py-3 text-purple-600"
     >Reset Msg</button>
-    <PropsDest :msg="msg"/>
+    <PropsDest :msg="msg" :name="name" :age="age" />
 
     <h1 class="mt-4">4. Set Slots</h1>
     <SetSlots>
