@@ -83,10 +83,10 @@ export default {
       this.current = (this.current + 90) % 360
     },
     handlebig() {
-      this.multiples = Number(this.multiples) + 0.1
+      this.multiples = Number(this.multiples) + 0.2
     },
     handleReduce() {
-      this.multiples = Number(this.multiples) - 0.1
+      this.multiples = Number(this.multiples) - 0.2
     },
     handleClose() {
       this.$emit('update:shows', false)
@@ -107,12 +107,12 @@ export default {
     cursor: pointer;
   }
   .target {
-  text-align: center;
-  display: inline-block;
-    -webkit-box-shadow: #666 0px 0px 10px;
     -moz-box-shadow: #666 0px 0px 10px;
-    box-shadow: #666 0px 0px 10px;
+    -webkit-box-shadow: #666 0px 0px 10px;
     background: #EEFF99;
+    box-shadow: #666 0px 0px 10px;
+    display: inline-block;
+    text-align: center;
   }
   .button {
     position: fixed;
