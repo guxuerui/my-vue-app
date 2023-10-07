@@ -52,8 +52,6 @@ export default {
   },
   data() {
     return {
-      dd: '',
-      inout: '',
       show: '',
       current: 0,
       name: '',
