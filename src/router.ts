@@ -11,6 +11,7 @@ const Todos = () => import('@c/Todos.vue');
 const VmodelTest = () => import('@c/VmodelTest.vue');
 const OpenAi = () => import('@views/openai.vue');
 const Vue3API = () => import('@views/Vue3.3.vue')
+const TestIframe = () => import('@views/TestIframe.vue')
 
 const routerHistory = createWebHistory();
 const router = createRouter({
@@ -73,6 +74,11 @@ const router = createRouter({
       path: '/vue3-api',
       name: 'Vue3.3',
       component: Vue3API
+    },
+    {
+      path: '/test-iframe',
+      name: 'TestIframe',
+      component: TestIframe
     },
     {
       path: '/:pathMatch(.*)*',

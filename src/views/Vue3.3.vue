@@ -10,9 +10,9 @@ const msg = ref('Hi there xixi~')
 const name = ref('gxr')
 const age = ref(18)
 
-function handleChange(count: number) {
-  console.log('changed count is: ', count)
-}
+// function handleChange(count: number) {
+//   console.log('changed count is: ', count)
+// }
 </script>
 
 <template>
@@ -22,7 +22,7 @@ function handleChange(count: number) {
 
     <h1 class="mt-4">2. defimeModel</h1>
     <h2>defineModel count: {{ count }}</h2>
-    <DefineModelComp v-model="count" @change="handleChange" />
+    <DefineModelComp v-model="count" />
 
     <h1 class="mt-4">3. Props Destructure</h1>
     <button

@@ -58,6 +58,10 @@
       {
         name: 'Vue3.3',
         path: '/vue3-api'
+      },
+      {
+        name: 'Iframe',
+        path: '/test-iframe'
       }
     ]
   )

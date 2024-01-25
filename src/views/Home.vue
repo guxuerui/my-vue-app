@@ -1,5 +1,233 @@
 <template>
   <div class="pt-5 home-container">
+    <div class="bg-blue-100">
+      <div class="min-h-screen bg-blue-50 p-8">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="grid grid-cols-12 gap-6">
+          <!-- Sidebar -->
+          <div class="col-span-3 px-6 py-8">
+            <div class="flex items-center space-x-4 mb-10">
+            <img alt="Company logo" class="rounded-full" height="50" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-pHFGMiraZCJOYx1x9LILtaII/user-nCj2M1A2CgrbRmk5klxQUFNx/img-sx5GDjvni5SFdPmHwMiPjpOc.png?st=2023-11-21T01%3A36%3A46Z&amp;se=2023-11-21T03%3A36%3A46Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2023-11-20T20%3A02%3A35Z&amp;ske=2023-11-21T20%3A02%3A35Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=4C95Gfi2Q%2BuniLxRYoF8ZlDQ1SpuOlG53jGpeYy4ocA%3D" width="50"/>
+            <h2 class="text-xl font-semibold">
+              Hello Melinda
+            </h2>
+            </div>
+            <div class="mb-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-sm font-semibold">
+              Alpaca.studio
+              </span>
+              <i class="fas fa-chevron-down text-sm">
+              </i>
+            </div>
+            <span class="text-xs">
+              https://alpaca.com/
+            </span>
+            </div>
+            <nav>
+            <ul>
+              <li class="mb-4">
+              <a class="flex items-center text-sm font-semibold text-blue-600" href="#">
+                <i class="fas fa-tachometer-alt mr-3">
+                </i>
+                Dashboard
+              </a>
+              </li>
+              <li class="mb-4">
+              <a class="flex items-center text-sm text-gray-600" href="#">
+                <i class="fas fa-calendar-alt mr-3">
+                </i>
+                Schedule
+              </a>
+              </li>
+              <li class="mb-4">
+              <a class="flex items-center text-sm text-gray-600" href="#">
+                <i class="fas fa-wallet mr-3">
+                </i>
+                Finance
+              </a>
+              </li>
+              <li class="mb-4">
+              <a class="flex items-center text-sm text-gray-600" href="#">
+                <i class="fas fa-envelope mr-3">
+                </i>
+                Messages
+                <span class="ml-auto bg-blue-600 text-white text-xs rounded-full px-2 py-1">
+                5
+                </span>
+              </a>
+              </li>
+              <li class="mb-4">
+              <a class="flex items-center text-sm text-gray-600" href="#">
+                <i class="fas fa-briefcase mr-3">
+                </i>
+                Portfolio
+              </a>
+              </li>
+              <li class="mb-4">
+              <a class="flex items-center text-sm text-gray-600" href="#">
+                <i class="fas fa-sign-out-alt mr-3">
+                </i>
+                Logout
+              </a>
+              </li>
+            </ul>
+            </nav>
+            <button class="bg-blue-600 text-white text-sm py-3 px-6 rounded-lg w-full mt-6">
+            Contact us
+            </button>
+          </div>
+          <!-- Main Content -->
+          <div class="col-span-9 px-6 py-8">
+            <div class="flex justify-between items-center mb-10">
+            <h1 class="text-2xl font-semibold">
+              Here is your task analytics for today
+            </h1>
+            <div class="flex items-center">
+              <div class="relative mr-4">
+              <input class="rounded-full pl-10 pr-4 py-2 border border-gray-300" placeholder="Search tasks" type="text"/>
+              <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+              </i>
+              </div>
+              <button class="text-blue-600">
+              <i class="fas fa-cog">
+              </i>
+              </button>
+              <button class="ml-4">
+              <img alt="User profile" class="rounded-full" height="40" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-pHFGMiraZCJOYx1x9LILtaII/user-nCj2M1A2CgrbRmk5klxQUFNx/img-rFUJxM5qCkAQLdfx4lmrJS5e.png?st=2023-11-21T01%3A36%3A45Z&amp;se=2023-11-21T03%3A36%3A45Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2023-11-20T20%3A36%3A41Z&amp;ske=2023-11-21T20%3A36%3A41Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=IXTYlN9DjaykFEMxMV18ab0evw94gnx4mvi%2BXbKSB%2Bo%3D" width="40"/>
+              </button>
+            </div>
+            </div>
+            <div class="grid grid-cols-3 gap-6">
+            <!-- User Cards -->
+            <div class="bg-white rounded-lg p-6 shadow">
+              <div class="flex items-center mb-4">
+              <img alt="User avatar" class="rounded-full mr-4" height="50" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-pHFGMiraZCJOYx1x9LILtaII/user-nCj2M1A2CgrbRmk5klxQUFNx/img-0owVXM61rsiHJ1RHnVfLLv7P.png?st=2023-11-21T01%3A36%3A47Z&amp;se=2023-11-21T03%3A36%3A47Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2023-11-20T11%3A26%3A58Z&amp;ske=2023-11-21T11%3A26%3A58Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=yk9bpy3pgkVsl0Y6A09S8YafvoIw0KQc/qKqh6aGUPI%3D" width="50"/>
+              <div>
+                <h3 class="text-sm font-semibold">
+                Anita Maryam
+                </h3>
+                <p class="text-xs text-gray-500">
+                Robinhood.co
+                </p>
+              </div>
+              </div>
+              <p class="text-xs">
+              4 from 6 task completed
+              </p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow">
+              <div class="flex items-center mb-4">
+              <img alt="User avatar" class="rounded-full mr-4" height="50" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-pHFGMiraZCJOYx1x9LILtaII/user-nCj2M1A2CgrbRmk5klxQUFNx/img-0owVXM61rsiHJ1RHnVfLLv7P.png?st=2023-11-21T01%3A36%3A47Z&amp;se=2023-11-21T03%3A36%3A47Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2023-11-20T11%3A26%3A58Z&amp;ske=2023-11-21T11%3A26%3A58Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=yk9bpy3pgkVsl0Y6A09S8YafvoIw0KQc/qKqh6aGUPI%3D" width="50"/>
+              <div>
+                <h3 class="text-sm font-semibold">
+                Steve Henderson
+                </h3>
+                <p class="text-xs text-gray-500">
+                simpans.studio
+                </p>
+              </div>
+              </div>
+              <p class="text-xs">
+              2 from 6 task completed
+              </p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow">
+              <div class="flex items-center mb-4">
+              <img alt="User avatar" class="rounded-full mr-4" height="50" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-pHFGMiraZCJOYx1x9LILtaII/user-nCj2M1A2CgrbRmk5klxQUFNx/img-0owVXM61rsiHJ1RHnVfLLv7P.png?st=2023-11-21T01%3A36%3A47Z&amp;se=2023-11-21T03%3A36%3A47Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2023-11-20T11%3A26%3A58Z&amp;ske=2023-11-21T11%3A26%3A58Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=yk9bpy3pgkVsl0Y6A09S8YafvoIw0KQc/qKqh6aGUPI%3D" width="50"/>
+              <div>
+                <h3 class="text-sm font-semibold">
+                Spencer Russel
+                </h3>
+                <p class="text-xs text-gray-500">
+                newage.com
+                </p>
+              </div>
+              </div>
+              <p class="text-xs">
+              4 from 10 task completed
+              </p>
+            </div>
+            <!-- Charts -->
+            <div class="col-span-2 bg-white rounded-lg p-6 shadow">
+              <h3 class="text-sm font-semibold mb-4">
+              Profit summary
+              </h3>
+              <!-- Chart placeholder -->
+              <div class="h-40 bg-gray-100 rounded-lg flex items-center justify-center">
+              <span class="text-xs">
+                Chart placeholder
+              </span>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow">
+              <h3 class="text-sm font-semibold mb-4">
+              Quick Recap
+              </h3>
+              <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center">
+                <i class="fas fa-sync-alt text-blue-600 mr-2">
+                </i>
+                <span class="text-xs">
+                45% growth
+                </span>
+              </div>
+              <span class="text-xs font-semibold text-blue-600">
+                Optimize
+              </span>
+              </div>
+              <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <i class="fas fa-shield-alt text-blue-600 mr-2">
+                </i>
+                <span class="text-xs">
+                75% your credibility
+                </span>
+              </div>
+              </div>
+            </div>
+            <!-- More Charts -->
+            <div class="col-span-2 bg-white rounded-lg p-6 shadow">
+              <h3 class="text-sm font-semibold mb-4">
+              Financial health
+              </h3>
+              <!-- Chart placeholder -->
+              <div class="h-40 bg-gray-100 rounded-lg flex items-center justify-center">
+              <span class="text-xs">
+                Chart placeholder
+              </span>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow">
+              <h3 class="text-sm font-semibold mb-4">
+              Time spent
+              </h3>
+              <!-- Chart placeholder -->
+              <div class="h-40 bg-gray-100 rounded-lg flex items-center justify-center">
+              <span class="text-xs">
+                Chart placeholder
+              </span>
+              </div>
+            </div>
+            <!-- Schedule -->
+            <div class="col-span-3 bg-white rounded-lg p-6 shadow">
+              <h3 class="text-sm font-semibold mb-4">
+              Daily schedule
+              </h3>
+              <!-- Chart placeholder -->
+              <div class="h-40 bg-gray-100 rounded-lg flex items-center justify-center">
+              <span class="text-xs">
+                Chart placeholder
+              </span>
+              </div>
+            </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div :class="home.glow" class="w-96 h-96 rounded-lg mb-12"></div>
     <vue3-status-indicator bg-color="#f81" />
     <vue3-status-indicator bg-color="#a8a" :pause="true" class="ml-4" />
     <span :class="home.title">我是一个标题, 使用v-bind.  平均值: {{ averageNum }}</span>
@@ -182,6 +410,11 @@
   .title {
     /* 状态驱动的 动态CSS */
     color: v-bind('theme.color');
+  }
+  .glow {
+    background-color: #0C1E7F;
+    box-shadow: 0 0 8px #0B5FFF, 0 0 12px #0B5FFF, 0 0 16px #0B5FFF, 0 0 24px #0B5FFF, 0 0 32px #0B5FFF;
+    border: 1px solid #0B5FFF;
   }
 </style>
 
